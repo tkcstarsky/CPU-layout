@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "C:/Users/tkc/Desktop/Single-CPU/SingleCPU.xst" -ofn "C:/Users/tkc/Desktop/Single-CPU/SingleCPU.syr" 
+xst -intstyle ise -ifn "C:/Users/tkc/Desktop/Single-CPU/SingleCPU.xst" -ofn "C:/Users/tkc/Desktop/Single-CPU/SingleCPU.syr" 
+xst -intstyle ise -ifn "C:/Users/tkc/Desktop/Single-CPU/SingleCPU.xst" -ofn "C:/Users/tkc/Desktop/Single-CPU/SingleCPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc3s1200e-ft256-5 SingleCPU.ngc SingleCPU.ngd  
+map -intstyle ise -p xc3s1200e-ft256-5 -cm area -ir off -pr off -c 100 -o SingleCPU_map.ncd SingleCPU.ngd SingleCPU.pcf 
+xst -intstyle ise -ifn "C:/Users/tkc/Desktop/Single-CPU/SingleCPU.xst" -ofn "C:/Users/tkc/Desktop/Single-CPU/SingleCPU.syr" 
+xst -intstyle ise -ifn "C:/Users/tkc/Desktop/Single-CPU/SingleCPU.xst" -ofn "C:/Users/tkc/Desktop/Single-CPU/SingleCPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc3s1200e-ft256-5 SingleCPU.ngc SingleCPU.ngd  
+map -intstyle ise -p xc3s1200e-ft256-5 -cm area -ir off -pr off -c 100 -o SingleCPU_map.ncd SingleCPU.ngd SingleCPU.pcf 
+map -intstyle ise -p xc3s1200e-ft256-5 -cm area -ir off -pr off -c 100 -o SingleCPU_map.ncd SingleCPU.ngd SingleCPU.pcf 

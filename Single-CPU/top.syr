@@ -1,0 +1,442 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.50 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.50 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-5-ft256
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "reg_file.v" in library work
+Compiling verilog file "ipcore_dir/RAM.v" in library work
+Module <reg_file> compiled
+Compiling verilog file "control.v" in library work
+Module <RAM> compiled
+Compiling verilog file "alu.v" in library work
+Module <control> compiled
+Compiling verilog file "top.v" in library work
+Module <alu> compiled
+Module <top> compiled
+No errors in compilation
+Analysis of file <"top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <top> in library <work>.
+
+Analyzing hierarchy for module <alu> in library <work> with parameters.
+	A_ADD = "00001"
+	A_AND = "00011"
+	A_NOP = "00000"
+	A_NOR = "00110"
+	A_OR = "00100"
+	A_SUB = "00010"
+	A_XOR = "00101"
+
+Analyzing hierarchy for module <reg_file> in library <work>.
+
+Analyzing hierarchy for module <control> in library <work> with parameters.
+	IDLE = "000"
+	S1 = "001"
+	S2 = "010"
+	S3 = "011"
+	SEND = "100"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <top>.
+WARNING:Xst:852 - "top.v" line 39: Unconnected input port 'wEna' of instance 'regfile' is tied to GND.
+WARNING:Xst:2211 - "ipcore_dir/RAM.v" line 40: Instantiating black box module <RAM>.
+Module <top> is correct for synthesis.
+ 
+Analyzing module <alu> in library <work>.
+	A_ADD = 5'b00001
+	A_AND = 5'b00011
+	A_NOP = 5'b00000
+	A_NOR = 5'b00110
+	A_OR = 5'b00100
+	A_SUB = 5'b00010
+	A_XOR = 5'b00101
+Module <alu> is correct for synthesis.
+ 
+Analyzing module <reg_file> in library <work>.
+Module <reg_file> is correct for synthesis.
+ 
+Analyzing module <control> in library <work>.
+	IDLE = 3'b000
+	S1 = 3'b001
+	S2 = 3'b010
+	S3 = 3'b011
+	SEND = 3'b100
+Module <control> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <current_state> in unit <control> has a constant value of 000 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <alu>.
+    Related source file is "alu.v".
+    Found 32-bit addsub for signal <alu_out$addsub0000>.
+    Found 32-bit xor2 for signal <alu_out$xor0000> created at line 42.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <reg_file>.
+    Related source file is "reg_file.v".
+    Found 32x32-bit dual-port RAM <Mram_register> for signal <register>.
+    Found 32x32-bit dual-port RAM <Mram_register_ren> for signal <register>.
+    Found 32-bit register for signal <data_out1>.
+    Found 32-bit register for signal <data_out2>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred  64 D-type flip-flop(s).
+Unit <reg_file> synthesized.
+
+
+Synthesizing Unit <control>.
+    Related source file is "control.v".
+WARNING:Xst:647 - Input <ram_out> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Register <regw_addr> equivalent to <regr_addr> has been removed
+    Register <wea> equivalent to <w_en> has been removed
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 69 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <current_state>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found 6-bit register for signal <regr_addr>.
+    Found 1-bit register for signal <ena>.
+    Found 32-bit register for signal <a>.
+    Found 32-bit register for signal <b>.
+    Found 5-bit register for signal <alu_op>.
+    Found 8-bit up counter for signal <ramw_addr>.
+    Found 8-bit register for signal <ramr_addr>.
+    Found 1-bit register for signal <w_en>.
+    Found 5-bit register for signal <current_state>.
+    Found 32-bit up counter for signal <i>.
+    Found 32-bit up counter for signal <j>.
+    Summary:
+	inferred   3 Counter(s).
+	inferred  85 D-type flip-flop(s).
+Unit <control> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "top.v".
+Unit <top> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port RAM                               : 2
+# Adders/Subtractors                                   : 1
+ 32-bit addsub                                         : 1
+# Counters                                             : 3
+ 32-bit up counter                                     : 2
+ 8-bit up counter                                      : 1
+# Registers                                            : 10
+ 1-bit register                                        : 2
+ 32-bit register                                       : 4
+ 5-bit register                                        : 2
+ 6-bit register                                        : 1
+ 8-bit register                                        : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/RAM.ngc>.
+Loading core <RAM> for timing and area information for instance <ra>.
+WARNING:Xst:1426 - The value init of the FF/Latch w_en hinder the constant cleaning in the block ctr.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <regr_addr_2> has a constant value of 0 in block <ctr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <regr_addr_3> has a constant value of 0 in block <ctr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <regr_addr_4> has a constant value of 0 in block <ctr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <regr_addr_5> has a constant value of 0 in block <ctr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <data_out2_6> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_7> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_8> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_9> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_10> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_11> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_12> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_13> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_14> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_15> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_16> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_17> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_18> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_19> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_20> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_21> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_22> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_23> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_24> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_25> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_26> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_27> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_28> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_29> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_30> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <data_out2_31> of sequential type is unconnected in block <regfile>.
+
+Synthesizing (advanced) Unit <reg_file>.
+INFO:Xst:3038 - The RAM <Mram_register> appears to be read-only. If that was not your intent please check the write enable description.
+INFO:Xst:3226 - The RAM <Mram_register> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_out1>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <write_addr>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <read_addr1>    |          |
+    |     doB            | connected to signal <data_out1>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3038 - The RAM <Mram_register_ren> appears to be read-only. If that was not your intent please check the write enable description.
+Unit <reg_file> synthesized (advanced).
+
+Synthesizing (advanced) Unit <top>.
+INFO:Xst:3226 - The RAM <regfile/Mram_register_ren> will be implemented as a BLOCK RAM, absorbing the following register(s): <regfile/data_out2>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <out2>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <a1>            |          |
+    |     doB            | connected to signal <a1>            |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port block RAM                         : 2
+# Adders/Subtractors                                   : 1
+ 32-bit addsub                                         : 1
+# Counters                                             : 3
+ 32-bit up counter                                     : 2
+ 8-bit up counter                                      : 1
+# Registers                                            : 90
+ Flip-Flops                                            : 90
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch ctr/w_en hinder the constant cleaning in the block top.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <ctr/regr_addr_2> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ctr/regr_addr_3> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ctr/regr_addr_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ctr/regr_addr_5> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+
+ERROR:Xst:528 - Multi-source in Unit <top> on signal <next_state<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output port doB<2> of instance <regfile/Mram_register_ren> of inferred macro RAM
+   Output port doB<3> of instance <regfile/Mram_register_ren> of inferred macro RAM
+   Output port doB<4> of instance <regfile/Mram_register_ren> of inferred macro RAM
+   Output port doB<5> of instance <regfile/Mram_register_ren> of inferred macro RAM
+   Signal <N0> in Unit <top> is assigned to GND
+   Signal <N0> in Unit <reg_file> is assigned to GND
+   Signal <next_state<0>> in Unit <control> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <top> on signal <a1<1>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output port doB<1> of instance <regfile/Mram_register_ren> of inferred macro RAM
+   Output signal of FDE instance <ctr/regr_addr_1>
+
+ERROR:Xst:528 - Multi-source in Unit <top> on signal <a1<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output port doB<0> of instance <regfile/Mram_register_ren> of inferred macro RAM
+   Output signal of FDE instance <ctr/regr_addr_0>
+
+ERROR:Xst:528 - Multi-source in Unit <top> on signal <ctr/current_state<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FDP instance <ctr/current_state/0>
+   Signal <current_state<0>> in Unit <control> is assigned to VCC
+
+ERROR:Xst:528 - Multi-source in Unit <top> on signal <ctr/current_state<1>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FDC instance <ctr/current_state/1>
+   Signal <current_state<1>> in Unit <control> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <top> on signal <ctr/current_state<2>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FDC instance <ctr/current_state/2>
+   Signal <current_state<2>> in Unit <control> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <top> on signal <ctr/current_state<3>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FDC instance <ctr/current_state/3>
+   Signal <current_state<3>> in Unit <control> is assigned to GND
+
+ERROR:Xst:528 - Multi-source in Unit <top> on signal <ctr/current_state<4>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FDC instance <ctr/current_state/4>
+   Signal <current_state<4>> in Unit <control> is assigned to GND
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.49 secs
+ 
+--> 
+
+Total memory usage is 256896 kilobytes
+
+Number of errors   :    8 (   0 filtered)
+Number of warnings :   45 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+
