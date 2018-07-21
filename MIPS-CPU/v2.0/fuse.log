@@ -1,0 +1,71 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/test2_isim_beh.exe -prj C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/test2_beh.prj work.test2 work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/Reg_we.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/Reg.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/StoreCtr.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/SignExtend.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/reg_file.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/PC.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/Mux3to1.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/Mux32.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/MEM-WB.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/LoadCtr.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/ipcore_dir/RAMemory.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/ipcore_dir/Memory.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/IF-ID.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/ID-EX.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/Hazardunit.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/Forwardunit.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/EX-MEM.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/control.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/ALUControl.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/alu.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/MulticycleCPU.v" into library work
+Analyzing Verilog file "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/test2.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/MulticycleCPU.v" Line 74: Size mismatch in connection of port <in1>. Formal port size is 32-bit while actual signal size is 5-bit.
+WARNING:HDLCompiler:189 - "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/MulticycleCPU.v" Line 84: Size mismatch in connection of port <qspo>. Formal port size is 32-bit while actual signal size is 1-bit.
+Completed static elaboration
+Compiling module PC
+Compiling module Mux
+Compiling module DIST_MEM_GEN_V7_2(C_FAMILY="arti...
+Compiling module Memory
+Compiling module Reg_we
+Compiling module IF_ID
+Compiling module Control
+Compiling module Mux(EM=22)
+Compiling module REG_FILE
+Compiling module SignExtend
+Compiling module Reg(EM=2)
+Compiling module Reg(EM=11)
+Compiling module Reg(EM=7)
+Compiling module Reg
+Compiling module Reg(EM=4)
+Compiling module Reg(EM=25)
+Compiling module ID_EX
+Compiling module ALUcontrol
+Compiling module ALU
+Compiling module Mux(EM=4)
+Compiling module Mux3to1
+Compiling module Reg(EM=0)
+Compiling module EX_MEM
+Compiling module DIST_MEM_GEN_V7_2(C_FAMILY="arti...
+Compiling module RAMemory
+Compiling module LoadCtr
+Compiling module StoreCtr
+Compiling module MEM_WB
+Compiling module Mux(EM=0)
+Compiling module Hazardunit
+Compiling module Forwardunit
+Compiling module PipelineCPU
+Compiling module test2
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 34 Verilog Units
+Built simulation executable C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/test2_isim_beh.exe
+Fuse Memory Usage: 29052 KB
+Fuse CPU Usage: 701 ms

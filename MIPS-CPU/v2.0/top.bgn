@@ -1,0 +1,321 @@
+Release 14.7 - Bitgen P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Loading device for application Rf_Device from file '7a100t.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\.
+   "top" is an NCD, version 3.2, device xc7a100t, package csg324, speed -3
+Opened constraints file top.pcf.
+
+Thu Jun 07 14:54:38 2018
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:3 -g CclkPin:PullUp -g M0Pin:PullUp -g M1Pin:PullUp -g M2Pin:PullUp -g ProgPin:PullUp -g InitPin:Pullup -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g Disable_JTAG:No -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g ExtMasterCclk_en:Disable -g ConfigFallback:Disable -g BPI_page_size:1 -g BPI_sync_mode:Disable -g SPI_32bit_addr:No -g SPI_buswidth:1 -g SPI_Fall_Edge:No -g OverTempPowerDown:Disable -g USR_ACCESS:None -g JTAG_XADC:Enable -g DCIUpdateMode:AsRequired -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g Match_cycle:Auto -g Security:None -g ICAP_select:Auto -g DonePipe:Yes -g Encrypt:No top.ncd 
+
+INFO:Bitgen:40 - Replacing "Auto" with "NoWait" for option "Match_cycle".  Most
+   commonly, bitgen has determined and will use a specific value instead of the
+   generic command-line value of "Auto".  Alternately, this message appears if
+   the same option is specified multiple times on the command-line.  In this
+   case, the option listed last will be used.
+Summary of Bitgen Options:
++----------------------+----------------------+
+| Option Name          | Current Setting      |
++----------------------+----------------------+
+| Compress             | (Not Specified)*     |
++----------------------+----------------------+
+| Readback             | (Not Specified)*     |
++----------------------+----------------------+
+| CRC                  | Enable**             |
++----------------------+----------------------+
+| DebugBitstream       | No**                 |
++----------------------+----------------------+
+| ConfigRate           | 3**                  |
++----------------------+----------------------+
+| StartupClk           | Cclk**               |
++----------------------+----------------------+
+| CclkPin              | Pullup**             |
++----------------------+----------------------+
+| DonePin              | Pullup*              |
++----------------------+----------------------+
+| M0Pin                | Pullup**             |
++----------------------+----------------------+
+| M1Pin                | Pullup**             |
++----------------------+----------------------+
+| M2Pin                | Pullup**             |
++----------------------+----------------------+
+| ProgPin              | Pullup**             |
++----------------------+----------------------+
+| InitPin              | Pullup**             |
++----------------------+----------------------+
+| TckPin               | Pullup**             |
++----------------------+----------------------+
+| TdiPin               | Pullup**             |
++----------------------+----------------------+
+| TdoPin               | Pullup**             |
++----------------------+----------------------+
+| TmsPin               | Pullup**             |
++----------------------+----------------------+
+| UnusedPin            | Pulldown**           |
++----------------------+----------------------+
+| GWE_cycle            | 6**                  |
++----------------------+----------------------+
+| GTS_cycle            | 5**                  |
++----------------------+----------------------+
+| OverTempPowerDown    | Disable**            |
++----------------------+----------------------+
+| LCK_cycle            | NoWait*              |
++----------------------+----------------------+
+| Match_cycle          | NoWait               |
++----------------------+----------------------+
+| DONE_cycle           | 4**                  |
++----------------------+----------------------+
+| Persist              | No*                  |
++----------------------+----------------------+
+| DonePipe             | Yes**                |
++----------------------+----------------------+
+| Security             | None**               |
++----------------------+----------------------+
+| UserID               | 0xFFFFFFFF**         |
++----------------------+----------------------+
+| ActiveReconfig       | No*                  |
++----------------------+----------------------+
+| Encrypt              | No**                 |
++----------------------+----------------------+
+| EncryptKeySelect     | bbram*               |
++----------------------+----------------------+
+| Key0                 | pick*                |
++----------------------+----------------------+
+| StartCBC             | pick*                |
++----------------------+----------------------+
+| HKey                 | pick*                |
++----------------------+----------------------+
+| KeyFile              | (Not Specified)*     |
++----------------------+----------------------+
+| DCIUpdateMode        | AsRequired**         |
++----------------------+----------------------+
+| ICAP_Select          | Auto**               |
++----------------------+----------------------+
+| ConfigFallback       | Disable**            |
++----------------------+----------------------+
+| SelectMAPAbort       | Enable*              |
++----------------------+----------------------+
+| BPI_page_size        | 1**                  |
++----------------------+----------------------+
+| BPI_1st_read_cycle   | 1*                   |
++----------------------+----------------------+
+| next_config_addr     | None*                |
++----------------------+----------------------+
+| next_config_reboot   | Enable*              |
++----------------------+----------------------+
+| InitSignalsError     | Enable*              |
++----------------------+----------------------+
+| XADCPartialReconfig  | Disable*             |
++----------------------+----------------------+
+| XADCEnhancedLinearity | Off*                 |
++----------------------+----------------------+
+| JTAG_XADC            | Enable**             |
++----------------------+----------------------+
+| Disable_JTAG         | No**                 |
++----------------------+----------------------+
+| XADCPowerDown        | Disable*             |
++----------------------+----------------------+
+| Partial              | (Not Specified)*     |
++----------------------+----------------------+
+| ExtMasterCclk_en     | Disable**            |
++----------------------+----------------------+
+| BPI_sync_mode        | Disable**            |
++----------------------+----------------------+
+| SPI_32bit_addr       | No**                 |
++----------------------+----------------------+
+| SPI_buswidth         | 1**                  |
++----------------------+----------------------+
+| SPI_Fall_Edge        | No**                 |
++----------------------+----------------------+
+| RevisionSelect       | 00*                  |
++----------------------+----------------------+
+| RevisionSelect_tristate | Disable*             |
++----------------------+----------------------+
+| TIMER_CFG            | None*                |
++----------------------+----------------------+
+| TIMER_USR            | None*                |
++----------------------+----------------------+
+| USR_ACCESS           | None**               |
++----------------------+----------------------+
+| TimeStamp            | Default*             |
++----------------------+----------------------+
+| IEEE1532             | No*                  |
++----------------------+----------------------+
+| Binary               | No**                 |
++----------------------+----------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+There were 0 CONFIG constraint(s) processed from top.pcf.
+
+
+Running DRC.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register2_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register11_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register3_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register12_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register13_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register4_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register5_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register14_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register15_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register6_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N20/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram9/SP.HIGH
+   > is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N24/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram11/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N28/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram13/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N88/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram43/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N56/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram27/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N52/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram25/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N84/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram41/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N116/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram57/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N32/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram15/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N60/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram29/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N124/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram61/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N128/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram63/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N92/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram45/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N120/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram59/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N68/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram33/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N72/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram35/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N64/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram31/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N96/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram47/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N36/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram17/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N76/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram37/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N80/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram39/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N40/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram19/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N48/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram23/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N44/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram21/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N100/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram49/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N104/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram51/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N12/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram5/SP.HIGH
+   > is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N4/CPU/Dat
+   amemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram1/SP.HIGH>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N8/CPU/Dat
+   amemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram3/SP.HIGH>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N16/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram7/SP.HIGH
+   > is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N112/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram55/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N108/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram53/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+DRC detected 0 errors and 42 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
+INFO:Security:54 - 'xc7a100t' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+
+Creating bit map...
+Saving bit stream in "top.bit".
+Bitstream generation is complete.

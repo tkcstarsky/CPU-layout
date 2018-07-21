@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/ALUControl.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/EX-MEM.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/Forwardunit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/Hazardunit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/ID-EX.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/IF-ID.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/LoadCtr.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/MEM-WB.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/MulticycleCPU.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/Mux32.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/Mux3to1.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/Mux4to1.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/PC.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/Reg.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/Reg_we.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/SignExtend.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/StoreCtr.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/alu.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/button_jitter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/clk_divide.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/clk_divide_addr.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/control.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/decoder.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/read_addr_gen.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/read_addr_gen_single.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/reg_file.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/seg.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/tkc/Desktop/MIPSCPU1.0/v2.0/PipelineMIPSCPU/top.v&quot; into library work</arg>
+</msg>
+
+</messages>
+

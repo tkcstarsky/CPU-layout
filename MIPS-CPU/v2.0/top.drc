@@ -1,0 +1,167 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Thu Jun 07 14:54:38 2018
+
+drc -z top.ncd top.pcf
+
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register2_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register11_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register3_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register12_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register13_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register4_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register5_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register14_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register15_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/registerfile/Mram_register6_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N20/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram9/SP.HIGH
+   > is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N24/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram11/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N28/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram13/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N88/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram43/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N56/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram27/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N52/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram25/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N84/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram41/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N116/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram57/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N32/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram15/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N60/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram29/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N124/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram61/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N128/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram63/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N92/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram45/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N120/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram59/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N68/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram33/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N72/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram35/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N64/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram31/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N96/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram47/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N36/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram17/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N76/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram37/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N80/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram39/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N40/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram19/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N48/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram23/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N44/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram21/SP.HIG
+   H> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N100/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram49/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N104/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram51/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N12/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram5/SP.HIGH
+   > is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N4/CPU/Dat
+   amemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram1/SP.HIGH>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N8/CPU/Dat
+   amemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram3/SP.HIGH>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N16/CPU/Da
+   tamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram7/SP.HIGH
+   > is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N112/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram55/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <CPU/Datamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N108/CPU/D
+   atamemory/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram53/SP.HI
+   GH> is incomplete. The signal does not drive any load pins in the design.
+DRC detected 0 errors and 42 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
