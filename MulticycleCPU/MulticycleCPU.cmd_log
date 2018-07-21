@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "C:/Users/tkc/Desktop/MulticycleCPU/MulticycleCPU/MulticycleCPU.xst" -ofn "C:/Users/tkc/Desktop/MulticycleCPU/MulticycleCPU/MulticycleCPU.syr" 
+xst -intstyle ise -ifn "C:/Users/tkc/Desktop/MulticycleCPU/MulticycleCPU/MulticycleCPU.xst" -ofn "C:/Users/tkc/Desktop/MulticycleCPU/MulticycleCPU/MulticycleCPU.syr" 
+xst -intstyle ise -ifn "C:/Users/tkc/Desktop/MulticycleCPU/MulticycleCPU/MulticycleCPU.xst" -ofn "C:/Users/tkc/Desktop/MulticycleCPU/MulticycleCPU/MulticycleCPU.syr" 

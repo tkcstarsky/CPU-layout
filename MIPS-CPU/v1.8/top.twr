@@ -1,0 +1,899 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf
+Nexys4-DDR_Master.ucf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1553555 paths analyzed, 4630 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   9.915ns.
+--------------------------------------------------------------------------------
+
+Paths for end point CPU/EXMreg/zeroreg/out_0 (SLICE_X32Y80.B4), 519666 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.085ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU/IDEXreg/Insaddrreg1/out_0 (FF)
+  Destination:          CPU/EXMreg/zeroreg/out_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      9.861ns (Levels of Logic = 12)
+  Clock Path Skew:      -0.019ns (0.103 - 0.122)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: CPU/IDEXreg/Insaddrreg1/out_0 to CPU/EXMreg/zeroreg/out_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y77.CMUX    Tshcko                0.428   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/IDEXreg/Insaddrreg1/out_0
+    SLICE_X33Y77.A1      net (fanout=4)        1.294   CPU/IDEXreg/Insaddrreg1/out<0>
+    SLICE_X33Y77.A       Tilo                  0.097   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/forwardunt/Mmux_ALUScrB22
+    SLICE_X32Y77.A6      net (fanout=32)       0.379   CPU/forwardunt/Mmux_ALUScrB21
+    SLICE_X32Y77.A       Tilo                  0.097   CPU/EXMreg/Breg/out<1>
+                                                       CPU/MuxALUsrcB/Mmux_control[1]_out[0]_Mux_63_o11
+    SLICE_X32Y75.A6      net (fanout=2)        0.305   CPU/MuxALUsrcB/control[1]_out[0]_Mux_63_o
+    SLICE_X32Y75.A       Tilo                  0.097   CPU/alu/Mmux_alu_out13601
+                                                       CPU/ALUctr/Mmux_ALUSrc_shamt1_SW10
+    SLICE_X35Y77.C2      net (fanout=2)        0.869   N69
+    SLICE_X35Y77.C       Tilo                  0.097   CPU/IDEXreg/Insaddrreg1/out<1>
+                                                       CPU/Muxshamt/Mmux_out110
+    SLICE_X35Y73.B1      net (fanout=78)       1.091   CPU/ScrB<0>
+    SLICE_X35Y73.B       Tilo                  0.097   CPU/IDEXreg/Insaddrreg2/out<4>
+                                                       CPU/alu/Sh1041
+    SLICE_X36Y80.B2      net (fanout=3)        0.789   CPU/alu/Sh104
+    SLICE_X36Y80.B       Tilo                  0.097   N32
+                                                       CPU/alu/Mmux_alu_out13622
+    SLICE_X36Y80.A4      net (fanout=1)        0.307   CPU/alu/Mmux_alu_out13622
+    SLICE_X36Y80.A       Tilo                  0.097   N32
+                                                       CPU/alu/Mmux_alu_out13623
+    SLICE_X36Y77.B1      net (fanout=1)        0.714   CPU/alu/Mmux_alu_out13623
+    SLICE_X36Y77.B       Tilo                  0.097   CPU/alu/Mmux_alu_out1314
+                                                       CPU/alu/Mmux_alu_out13625
+    SLICE_X29Y77.D2      net (fanout=1)        0.713   CPU/alu/Mmux_alu_out13625
+    SLICE_X29Y77.D       Tilo                  0.097   CPU/EXMreg/ALUreg/out<8>
+                                                       CPU/alu/Mmux_alu_out13626
+    SLICE_X29Y80.B1      net (fanout=2)        0.703   CPU/ALU_out<8>
+    SLICE_X29Y80.COUT    Topcyb                0.509   CPU/alu/Mcompar_GND_20_o_alu_out[31]_LessThan_16_o_cy<3>
+                                                       CPU/alu/Mcompar_GND_20_o_alu_out[31]_LessThan_16_o_lut<1>
+                                                       CPU/alu/Mcompar_GND_20_o_alu_out[31]_LessThan_16_o_cy<3>
+    SLICE_X29Y81.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_GND_20_o_alu_out[31]_LessThan_16_o_cy<3>
+    SLICE_X29Y81.CMUX    Tcinc                 0.313   N96
+                                                       CPU/alu/Mcompar_GND_20_o_alu_out[31]_LessThan_16_o_cy<6>
+    SLICE_X32Y80.B4      net (fanout=1)        0.509   CPU/alu/Mcompar_GND_20_o_alu_out[31]_LessThan_16_o_cy<6>
+    SLICE_X32Y80.CLK     Tas                   0.065   CPU/EXMreg/zeroreg/out_0
+                                                       CPU/alu/Mmux_zero11
+                                                       CPU/EXMreg/zeroreg/out_0
+    -------------------------------------------------  ---------------------------
+    Total                                      9.861ns (2.188ns logic, 7.673ns route)
+                                                       (22.2% logic, 77.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.091ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU/IDEXreg/Insaddrreg1/out_0 (FF)
+  Destination:          CPU/EXMreg/zeroreg/out_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      9.855ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.019ns (0.103 - 0.122)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: CPU/IDEXreg/Insaddrreg1/out_0 to CPU/EXMreg/zeroreg/out_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y77.CMUX    Tshcko                0.428   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/IDEXreg/Insaddrreg1/out_0
+    SLICE_X33Y77.A1      net (fanout=4)        1.294   CPU/IDEXreg/Insaddrreg1/out<0>
+    SLICE_X33Y77.A       Tilo                  0.097   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/forwardunt/Mmux_ALUScrB22
+    SLICE_X32Y77.A6      net (fanout=32)       0.379   CPU/forwardunt/Mmux_ALUScrB21
+    SLICE_X32Y77.A       Tilo                  0.097   CPU/EXMreg/Breg/out<1>
+                                                       CPU/MuxALUsrcB/Mmux_control[1]_out[0]_Mux_63_o11
+    SLICE_X32Y75.A6      net (fanout=2)        0.305   CPU/MuxALUsrcB/control[1]_out[0]_Mux_63_o
+    SLICE_X32Y75.A       Tilo                  0.097   CPU/alu/Mmux_alu_out13601
+                                                       CPU/ALUctr/Mmux_ALUSrc_shamt1_SW10
+    SLICE_X35Y77.C2      net (fanout=2)        0.869   N69
+    SLICE_X35Y77.C       Tilo                  0.097   CPU/IDEXreg/Insaddrreg1/out<1>
+                                                       CPU/Muxshamt/Mmux_out110
+    SLICE_X33Y86.C3      net (fanout=78)       1.040   CPU/ScrB<0>
+    SLICE_X33Y86.C       Tilo                  0.097   CPU/alu/Sh243
+                                                       CPU/alu/Sh1231
+    SLICE_X30Y85.B1      net (fanout=7)        0.742   CPU/alu/Sh123
+    SLICE_X30Y85.B       Tilo                  0.097   CPU/EXMreg/ALUreg/out<31>
+                                                       CPU/alu/Sh14311
+    SLICE_X30Y84.A4      net (fanout=3)        0.753   CPU/alu/Sh1431
+    SLICE_X30Y84.A       Tilo                  0.097   CPU/alu/Sh127
+                                                       CPU/alu/Mmux_alu_out13603
+    SLICE_X32Y78.B4      net (fanout=1)        0.558   CPU/alu/Mmux_alu_out13602
+    SLICE_X32Y78.B       Tilo                  0.097   CPU/alu/Sh451
+                                                       CPU/alu/Mmux_alu_out13604
+    SLICE_X32Y78.A4      net (fanout=1)        0.307   CPU/alu/Mmux_alu_out13603
+    SLICE_X32Y78.A       Tilo                  0.097   CPU/alu/Sh451
+                                                       CPU/alu/Mmux_alu_out13607
+    SLICE_X29Y77.B6      net (fanout=2)        0.307   CPU/alu/Mmux_alu_out13606
+    SLICE_X29Y77.B       Tilo                  0.097   CPU/EXMreg/ALUreg/out<8>
+                                                       CPU/alu/Mmux_alu_out13608
+    SLICE_X29Y80.B4      net (fanout=1)        0.507   CPU/ALU_out<7>
+    SLICE_X29Y80.COUT    Topcyb                0.509   CPU/alu/Mcompar_GND_20_o_alu_out[31]_LessThan_16_o_cy<3>
+                                                       CPU/alu/Mcompar_GND_20_o_alu_out[31]_LessThan_16_o_lut<1>
+                                                       CPU/alu/Mcompar_GND_20_o_alu_out[31]_LessThan_16_o_cy<3>
+    SLICE_X29Y81.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_GND_20_o_alu_out[31]_LessThan_16_o_cy<3>
+    SLICE_X29Y81.CMUX    Tcinc                 0.313   N96
+                                                       CPU/alu/Mcompar_GND_20_o_alu_out[31]_LessThan_16_o_cy<6>
+    SLICE_X32Y80.B4      net (fanout=1)        0.509   CPU/alu/Mcompar_GND_20_o_alu_out[31]_LessThan_16_o_cy<6>
+    SLICE_X32Y80.CLK     Tas                   0.065   CPU/EXMreg/zeroreg/out_0
+                                                       CPU/alu/Mmux_zero11
+                                                       CPU/EXMreg/zeroreg/out_0
+    -------------------------------------------------  ---------------------------
+    Total                                      9.855ns (2.285ns logic, 7.570ns route)
+                                                       (23.2% logic, 76.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.223ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU/IDEXreg/Insaddrreg1/out_0 (FF)
+  Destination:          CPU/EXMreg/zeroreg/out_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      9.723ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.019ns (0.103 - 0.122)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: CPU/IDEXreg/Insaddrreg1/out_0 to CPU/EXMreg/zeroreg/out_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y77.CMUX    Tshcko                0.428   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/IDEXreg/Insaddrreg1/out_0
+    SLICE_X33Y77.A1      net (fanout=4)        1.294   CPU/IDEXreg/Insaddrreg1/out<0>
+    SLICE_X33Y77.A       Tilo                  0.097   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/forwardunt/Mmux_ALUScrB22
+    SLICE_X32Y77.A6      net (fanout=32)       0.379   CPU/forwardunt/Mmux_ALUScrB21
+    SLICE_X32Y77.A       Tilo                  0.097   CPU/EXMreg/Breg/out<1>
+                                                       CPU/MuxALUsrcB/Mmux_control[1]_out[0]_Mux_63_o11
+    SLICE_X32Y75.A6      net (fanout=2)        0.305   CPU/MuxALUsrcB/control[1]_out[0]_Mux_63_o
+    SLICE_X32Y75.A       Tilo                  0.097   CPU/alu/Mmux_alu_out13601
+                                                       CPU/ALUctr/Mmux_ALUSrc_shamt1_SW10
+    SLICE_X35Y77.C2      net (fanout=2)        0.869   N69
+    SLICE_X35Y77.C       Tilo                  0.097   CPU/IDEXreg/Insaddrreg1/out<1>
+                                                       CPU/Muxshamt/Mmux_out110
+    SLICE_X31Y88.C2      net (fanout=78)       1.314   CPU/ScrB<0>
+    SLICE_X31Y88.C       Tilo                  0.097   CPU/alu/Mmux_alu_out1332
+                                                       CPU/alu/Sh231
+    SLICE_X29Y87.C4      net (fanout=3)        0.438   CPU/alu/Sh23
+    SLICE_X29Y87.C       Tilo                  0.097   CPU/alu/Sh15
+                                                       CPU/alu/Mmux_alu_out13405
+    SLICE_X28Y87.D3      net (fanout=1)        0.653   CPU/alu/Mmux_alu_out13404
+    SLICE_X28Y87.CMUX    Topdc                 0.408   CPU/alu/Mmux_alu_out13406
+                                                       CPU/alu/Mmux_alu_out13407_F
+                                                       CPU/alu/Mmux_alu_out13407
+    SLICE_X30Y82.C5      net (fanout=1)        0.431   CPU/alu/Mmux_alu_out13406
+    SLICE_X30Y82.C       Tilo                  0.097   CPU/alu/Mmux_alu_out13402
+                                                       CPU/alu/Mmux_alu_out13408
+    SLICE_X29Y82.A2      net (fanout=1)        0.596   CPU/alu/Mmux_alu_out13407
+    SLICE_X29Y82.A       Tilo                  0.097   CPU/EXMreg/ALUreg/out<26>
+                                                       CPU/alu/Mmux_alu_out13409
+    SLICE_X29Y81.B2      net (fanout=2)        0.593   CPU/ALU_out<27>
+    SLICE_X29Y81.CMUX    Topbc                 0.665   N96
+                                                       CPU/alu/Mcompar_GND_20_o_alu_out[31]_LessThan_16_o_lut<5>
+                                                       CPU/alu/Mcompar_GND_20_o_alu_out[31]_LessThan_16_o_cy<6>
+    SLICE_X32Y80.B4      net (fanout=1)        0.509   CPU/alu/Mcompar_GND_20_o_alu_out[31]_LessThan_16_o_cy<6>
+    SLICE_X32Y80.CLK     Tas                   0.065   CPU/EXMreg/zeroreg/out_0
+                                                       CPU/alu/Mmux_zero11
+                                                       CPU/EXMreg/zeroreg/out_0
+    -------------------------------------------------  ---------------------------
+    Total                                      9.723ns (2.342ns logic, 7.381ns route)
+                                                       (24.1% logic, 75.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point CPU/EXMreg/zeroreg/out_0 (SLICE_X32Y80.B5), 509152 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.381ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU/IDEXreg/Insaddrreg1/out_0 (FF)
+  Destination:          CPU/EXMreg/zeroreg/out_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      9.565ns (Levels of Logic = 18)
+  Clock Path Skew:      -0.019ns (0.103 - 0.122)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: CPU/IDEXreg/Insaddrreg1/out_0 to CPU/EXMreg/zeroreg/out_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y77.CMUX    Tshcko                0.428   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/IDEXreg/Insaddrreg1/out_0
+    SLICE_X33Y77.A1      net (fanout=4)        1.294   CPU/IDEXreg/Insaddrreg1/out<0>
+    SLICE_X33Y77.A       Tilo                  0.097   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/forwardunt/Mmux_ALUScrB22
+    SLICE_X31Y74.C6      net (fanout=32)       0.534   CPU/forwardunt/Mmux_ALUScrB21
+    SLICE_X31Y74.C       Tilo                  0.097   CPU/EXMreg/Breg/out<6>
+                                                       CPU/MuxALUsrcB/Mmux_control[1]_out[6]_Mux_51_o11
+    SLICE_X31Y74.D4      net (fanout=1)        0.302   CPU/MuxALUsrcB/control[1]_out[6]_Mux_51_o
+    SLICE_X31Y74.D       Tilo                  0.097   CPU/EXMreg/Breg/out<6>
+                                                       CPU/Muxshamt/Mmux_out291
+    SLICE_X30Y76.D3      net (fanout=5)        1.074   CPU/ScrB<6>
+    SLICE_X30Y76.COUT    Topcyd                0.381   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_lut<3>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+    SLICE_X30Y77.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+    SLICE_X30Y77.COUT    Tbyp                  0.092   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+    SLICE_X30Y78.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+    SLICE_X30Y78.COUT    Tbyp                  0.092   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+    SLICE_X30Y79.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+    SLICE_X30Y79.DMUX    Tcind                 0.319   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+    SLICE_X28Y76.B4      net (fanout=2)        0.547   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+    SLICE_X28Y76.B       Tilo                  0.097   CPU/MuxALUsrcA/control[1]_out[13]_Mux_37_o
+                                                       CPU/alu/Mmux_alu_out6_A110
+    SLICE_X28Y77.A4      net (fanout=1)        0.407   CPU/alu/Mmux_alu_out6_rs_A<0>
+    SLICE_X28Y77.COUT    Topcya                0.471   CPU/alu/Mmux_alu_out6_rs_cy<3>
+                                                       CPU/alu/Mmux_alu_out6_rs_A<0>_rt
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<3>
+    SLICE_X28Y78.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<3>
+    SLICE_X28Y78.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<7>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<7>
+    SLICE_X28Y79.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<7>
+    SLICE_X28Y79.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<11>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<11>
+    SLICE_X28Y80.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<11>
+    SLICE_X28Y80.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<15>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<15>
+    SLICE_X28Y81.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<15>
+    SLICE_X28Y81.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<19>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<19>
+    SLICE_X28Y82.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<19>
+    SLICE_X28Y82.DMUX    Tcind                 0.371   CPU/alu/Mmux_alu_out6_rs_cy<23>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<23>
+    SLICE_X29Y84.A2      net (fanout=1)        0.597   CPU/alu/Mmux_alu_out6_split<23>
+    SLICE_X29Y84.A       Tilo                  0.097   CPU/EXMreg/ALUreg/out<24>
+                                                       CPU/alu/Mmux_alu_out13327
+    SLICE_X29Y82.B3      net (fanout=2)        0.585   CPU/ALU_out<23>
+    SLICE_X29Y82.B       Tilo                  0.097   CPU/EXMreg/ALUreg/out<26>
+                                                       CPU/alu/alu_out[31]_GND_20_o_equal_14_o<31>3
+    SLICE_X32Y80.A3      net (fanout=1)        0.783   CPU/alu/alu_out[31]_GND_20_o_equal_14_o<31>2
+    SLICE_X32Y80.A       Tilo                  0.097   CPU/EXMreg/zeroreg/out_0
+                                                       CPU/alu/alu_out[31]_GND_20_o_equal_14_o<31>7
+    SLICE_X32Y80.B5      net (fanout=1)        0.188   CPU/alu/alu_out[31]_GND_20_o_equal_14_o
+    SLICE_X32Y80.CLK     Tas                   0.065   CPU/EXMreg/zeroreg/out_0
+                                                       CPU/alu/Mmux_zero11
+                                                       CPU/EXMreg/zeroreg/out_0
+    -------------------------------------------------  ---------------------------
+    Total                                      9.565ns (3.254ns logic, 6.311ns route)
+                                                       (34.0% logic, 66.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.401ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU/IDEXreg/Insaddrreg1/out_0 (FF)
+  Destination:          CPU/EXMreg/zeroreg/out_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      9.545ns (Levels of Logic = 18)
+  Clock Path Skew:      -0.019ns (0.103 - 0.122)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: CPU/IDEXreg/Insaddrreg1/out_0 to CPU/EXMreg/zeroreg/out_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y77.CMUX    Tshcko                0.428   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/IDEXreg/Insaddrreg1/out_0
+    SLICE_X33Y77.A1      net (fanout=4)        1.294   CPU/IDEXreg/Insaddrreg1/out<0>
+    SLICE_X33Y77.A       Tilo                  0.097   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/forwardunt/Mmux_ALUScrB22
+    SLICE_X31Y74.C6      net (fanout=32)       0.534   CPU/forwardunt/Mmux_ALUScrB21
+    SLICE_X31Y74.C       Tilo                  0.097   CPU/EXMreg/Breg/out<6>
+                                                       CPU/MuxALUsrcB/Mmux_control[1]_out[6]_Mux_51_o11
+    SLICE_X31Y74.D4      net (fanout=1)        0.302   CPU/MuxALUsrcB/control[1]_out[6]_Mux_51_o
+    SLICE_X31Y74.D       Tilo                  0.097   CPU/EXMreg/Breg/out<6>
+                                                       CPU/Muxshamt/Mmux_out291
+    SLICE_X30Y76.D3      net (fanout=5)        1.074   CPU/ScrB<6>
+    SLICE_X30Y76.COUT    Topcyd                0.361   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_lutdi3
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+    SLICE_X30Y77.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+    SLICE_X30Y77.COUT    Tbyp                  0.092   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+    SLICE_X30Y78.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+    SLICE_X30Y78.COUT    Tbyp                  0.092   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+    SLICE_X30Y79.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+    SLICE_X30Y79.DMUX    Tcind                 0.319   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+    SLICE_X28Y76.B4      net (fanout=2)        0.547   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+    SLICE_X28Y76.B       Tilo                  0.097   CPU/MuxALUsrcA/control[1]_out[13]_Mux_37_o
+                                                       CPU/alu/Mmux_alu_out6_A110
+    SLICE_X28Y77.A4      net (fanout=1)        0.407   CPU/alu/Mmux_alu_out6_rs_A<0>
+    SLICE_X28Y77.COUT    Topcya                0.471   CPU/alu/Mmux_alu_out6_rs_cy<3>
+                                                       CPU/alu/Mmux_alu_out6_rs_A<0>_rt
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<3>
+    SLICE_X28Y78.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<3>
+    SLICE_X28Y78.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<7>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<7>
+    SLICE_X28Y79.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<7>
+    SLICE_X28Y79.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<11>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<11>
+    SLICE_X28Y80.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<11>
+    SLICE_X28Y80.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<15>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<15>
+    SLICE_X28Y81.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<15>
+    SLICE_X28Y81.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<19>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<19>
+    SLICE_X28Y82.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<19>
+    SLICE_X28Y82.DMUX    Tcind                 0.371   CPU/alu/Mmux_alu_out6_rs_cy<23>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<23>
+    SLICE_X29Y84.A2      net (fanout=1)        0.597   CPU/alu/Mmux_alu_out6_split<23>
+    SLICE_X29Y84.A       Tilo                  0.097   CPU/EXMreg/ALUreg/out<24>
+                                                       CPU/alu/Mmux_alu_out13327
+    SLICE_X29Y82.B3      net (fanout=2)        0.585   CPU/ALU_out<23>
+    SLICE_X29Y82.B       Tilo                  0.097   CPU/EXMreg/ALUreg/out<26>
+                                                       CPU/alu/alu_out[31]_GND_20_o_equal_14_o<31>3
+    SLICE_X32Y80.A3      net (fanout=1)        0.783   CPU/alu/alu_out[31]_GND_20_o_equal_14_o<31>2
+    SLICE_X32Y80.A       Tilo                  0.097   CPU/EXMreg/zeroreg/out_0
+                                                       CPU/alu/alu_out[31]_GND_20_o_equal_14_o<31>7
+    SLICE_X32Y80.B5      net (fanout=1)        0.188   CPU/alu/alu_out[31]_GND_20_o_equal_14_o
+    SLICE_X32Y80.CLK     Tas                   0.065   CPU/EXMreg/zeroreg/out_0
+                                                       CPU/alu/Mmux_zero11
+                                                       CPU/EXMreg/zeroreg/out_0
+    -------------------------------------------------  ---------------------------
+    Total                                      9.545ns (3.234ns logic, 6.311ns route)
+                                                       (33.9% logic, 66.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.433ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU/IDEXreg/Insaddrreg1/out_0 (FF)
+  Destination:          CPU/EXMreg/zeroreg/out_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      9.513ns (Levels of Logic = 19)
+  Clock Path Skew:      -0.019ns (0.103 - 0.122)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: CPU/IDEXreg/Insaddrreg1/out_0 to CPU/EXMreg/zeroreg/out_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y77.CMUX    Tshcko                0.428   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/IDEXreg/Insaddrreg1/out_0
+    SLICE_X33Y77.A1      net (fanout=4)        1.294   CPU/IDEXreg/Insaddrreg1/out<0>
+    SLICE_X33Y77.A       Tilo                  0.097   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/forwardunt/Mmux_ALUScrB22
+    SLICE_X32Y77.A6      net (fanout=32)       0.379   CPU/forwardunt/Mmux_ALUScrB21
+    SLICE_X32Y77.A       Tilo                  0.097   CPU/EXMreg/Breg/out<1>
+                                                       CPU/MuxALUsrcB/Mmux_control[1]_out[0]_Mux_63_o11
+    SLICE_X32Y77.B5      net (fanout=2)        0.197   CPU/MuxALUsrcB/control[1]_out[0]_Mux_63_o
+    SLICE_X32Y77.B       Tilo                  0.097   CPU/EXMreg/Breg/out<1>
+                                                       CPU/ALUctr/Mmux_ALUSrc_shamt1_SW9
+    SLICE_X32Y75.B6      net (fanout=2)        0.627   N68
+    SLICE_X32Y75.B       Tilo                  0.097   CPU/alu/Mmux_alu_out13601
+                                                       CPU/Muxshamt/Mmux_out110_1
+    SLICE_X30Y76.A3      net (fanout=1)        0.463   CPU/Muxshamt/Mmux_out110
+    SLICE_X30Y76.COUT    Topcya                0.476   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_lut<0>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+    SLICE_X30Y77.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+    SLICE_X30Y77.COUT    Tbyp                  0.092   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+    SLICE_X30Y78.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+    SLICE_X30Y78.COUT    Tbyp                  0.092   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+    SLICE_X30Y79.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+    SLICE_X30Y79.DMUX    Tcind                 0.319   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+    SLICE_X28Y76.B4      net (fanout=2)        0.547   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+    SLICE_X28Y76.B       Tilo                  0.097   CPU/MuxALUsrcA/control[1]_out[13]_Mux_37_o
+                                                       CPU/alu/Mmux_alu_out6_A110
+    SLICE_X28Y77.A4      net (fanout=1)        0.407   CPU/alu/Mmux_alu_out6_rs_A<0>
+    SLICE_X28Y77.COUT    Topcya                0.471   CPU/alu/Mmux_alu_out6_rs_cy<3>
+                                                       CPU/alu/Mmux_alu_out6_rs_A<0>_rt
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<3>
+    SLICE_X28Y78.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<3>
+    SLICE_X28Y78.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<7>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<7>
+    SLICE_X28Y79.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<7>
+    SLICE_X28Y79.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<11>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<11>
+    SLICE_X28Y80.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<11>
+    SLICE_X28Y80.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<15>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<15>
+    SLICE_X28Y81.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<15>
+    SLICE_X28Y81.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<19>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<19>
+    SLICE_X28Y82.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<19>
+    SLICE_X28Y82.DMUX    Tcind                 0.371   CPU/alu/Mmux_alu_out6_rs_cy<23>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<23>
+    SLICE_X29Y84.A2      net (fanout=1)        0.597   CPU/alu/Mmux_alu_out6_split<23>
+    SLICE_X29Y84.A       Tilo                  0.097   CPU/EXMreg/ALUreg/out<24>
+                                                       CPU/alu/Mmux_alu_out13327
+    SLICE_X29Y82.B3      net (fanout=2)        0.585   CPU/ALU_out<23>
+    SLICE_X29Y82.B       Tilo                  0.097   CPU/EXMreg/ALUreg/out<26>
+                                                       CPU/alu/alu_out[31]_GND_20_o_equal_14_o<31>3
+    SLICE_X32Y80.A3      net (fanout=1)        0.783   CPU/alu/alu_out[31]_GND_20_o_equal_14_o<31>2
+    SLICE_X32Y80.A       Tilo                  0.097   CPU/EXMreg/zeroreg/out_0
+                                                       CPU/alu/alu_out[31]_GND_20_o_equal_14_o<31>7
+    SLICE_X32Y80.B5      net (fanout=1)        0.188   CPU/alu/alu_out[31]_GND_20_o_equal_14_o
+    SLICE_X32Y80.CLK     Tas                   0.065   CPU/EXMreg/zeroreg/out_0
+                                                       CPU/alu/Mmux_zero11
+                                                       CPU/EXMreg/zeroreg/out_0
+    -------------------------------------------------  ---------------------------
+    Total                                      9.513ns (3.446ns logic, 6.067ns route)
+                                                       (36.2% logic, 63.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point CPU/EXMreg/ALUreg/out_31 (SLICE_X30Y85.D2), 13691 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.961ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU/IDEXreg/Insaddrreg1/out_0 (FF)
+  Destination:          CPU/EXMreg/ALUreg/out_31 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.989ns (Levels of Logic = 17)
+  Clock Path Skew:      -0.015ns (0.107 - 0.122)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: CPU/IDEXreg/Insaddrreg1/out_0 to CPU/EXMreg/ALUreg/out_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y77.CMUX    Tshcko                0.428   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/IDEXreg/Insaddrreg1/out_0
+    SLICE_X33Y77.A1      net (fanout=4)        1.294   CPU/IDEXreg/Insaddrreg1/out<0>
+    SLICE_X33Y77.A       Tilo                  0.097   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/forwardunt/Mmux_ALUScrB22
+    SLICE_X31Y74.C6      net (fanout=32)       0.534   CPU/forwardunt/Mmux_ALUScrB21
+    SLICE_X31Y74.C       Tilo                  0.097   CPU/EXMreg/Breg/out<6>
+                                                       CPU/MuxALUsrcB/Mmux_control[1]_out[6]_Mux_51_o11
+    SLICE_X31Y74.D4      net (fanout=1)        0.302   CPU/MuxALUsrcB/control[1]_out[6]_Mux_51_o
+    SLICE_X31Y74.D       Tilo                  0.097   CPU/EXMreg/Breg/out<6>
+                                                       CPU/Muxshamt/Mmux_out291
+    SLICE_X30Y76.D3      net (fanout=5)        1.074   CPU/ScrB<6>
+    SLICE_X30Y76.COUT    Topcyd                0.381   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_lut<3>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+    SLICE_X30Y77.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+    SLICE_X30Y77.COUT    Tbyp                  0.092   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+    SLICE_X30Y78.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+    SLICE_X30Y78.COUT    Tbyp                  0.092   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+    SLICE_X30Y79.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+    SLICE_X30Y79.DMUX    Tcind                 0.319   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+    SLICE_X28Y76.B4      net (fanout=2)        0.547   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+    SLICE_X28Y76.B       Tilo                  0.097   CPU/MuxALUsrcA/control[1]_out[13]_Mux_37_o
+                                                       CPU/alu/Mmux_alu_out6_A110
+    SLICE_X28Y77.A4      net (fanout=1)        0.407   CPU/alu/Mmux_alu_out6_rs_A<0>
+    SLICE_X28Y77.COUT    Topcya                0.471   CPU/alu/Mmux_alu_out6_rs_cy<3>
+                                                       CPU/alu/Mmux_alu_out6_rs_A<0>_rt
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<3>
+    SLICE_X28Y78.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<3>
+    SLICE_X28Y78.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<7>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<7>
+    SLICE_X28Y79.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<7>
+    SLICE_X28Y79.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<11>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<11>
+    SLICE_X28Y80.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<11>
+    SLICE_X28Y80.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<15>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<15>
+    SLICE_X28Y81.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<15>
+    SLICE_X28Y81.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<19>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<19>
+    SLICE_X28Y82.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<19>
+    SLICE_X28Y82.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<23>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<23>
+    SLICE_X28Y83.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<23>
+    SLICE_X28Y83.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<27>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<27>
+    SLICE_X28Y84.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<27>
+    SLICE_X28Y84.DMUX    Tcind                 0.371   CPU/alu/Mmux_alu_out6_split<31>
+                                                       CPU/alu/Mmux_alu_out6_rs_xor<31>
+    SLICE_X30Y85.D2      net (fanout=2)        0.728   CPU/alu/Mmux_alu_out6_split<31>
+    SLICE_X30Y85.CLK     Tas                   0.027   CPU/EXMreg/ALUreg/out<31>
+                                                       CPU/alu/Mmux_alu_out13506
+                                                       CPU/EXMreg/ALUreg/out_31
+    -------------------------------------------------  ---------------------------
+    Total                                      7.989ns (3.103ns logic, 4.886ns route)
+                                                       (38.8% logic, 61.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.981ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU/IDEXreg/Insaddrreg1/out_0 (FF)
+  Destination:          CPU/EXMreg/ALUreg/out_31 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.969ns (Levels of Logic = 17)
+  Clock Path Skew:      -0.015ns (0.107 - 0.122)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: CPU/IDEXreg/Insaddrreg1/out_0 to CPU/EXMreg/ALUreg/out_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y77.CMUX    Tshcko                0.428   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/IDEXreg/Insaddrreg1/out_0
+    SLICE_X33Y77.A1      net (fanout=4)        1.294   CPU/IDEXreg/Insaddrreg1/out<0>
+    SLICE_X33Y77.A       Tilo                  0.097   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/forwardunt/Mmux_ALUScrB22
+    SLICE_X31Y74.C6      net (fanout=32)       0.534   CPU/forwardunt/Mmux_ALUScrB21
+    SLICE_X31Y74.C       Tilo                  0.097   CPU/EXMreg/Breg/out<6>
+                                                       CPU/MuxALUsrcB/Mmux_control[1]_out[6]_Mux_51_o11
+    SLICE_X31Y74.D4      net (fanout=1)        0.302   CPU/MuxALUsrcB/control[1]_out[6]_Mux_51_o
+    SLICE_X31Y74.D       Tilo                  0.097   CPU/EXMreg/Breg/out<6>
+                                                       CPU/Muxshamt/Mmux_out291
+    SLICE_X30Y76.D3      net (fanout=5)        1.074   CPU/ScrB<6>
+    SLICE_X30Y76.COUT    Topcyd                0.361   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_lutdi3
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+    SLICE_X30Y77.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+    SLICE_X30Y77.COUT    Tbyp                  0.092   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+    SLICE_X30Y78.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+    SLICE_X30Y78.COUT    Tbyp                  0.092   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+    SLICE_X30Y79.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+    SLICE_X30Y79.DMUX    Tcind                 0.319   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+    SLICE_X28Y76.B4      net (fanout=2)        0.547   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+    SLICE_X28Y76.B       Tilo                  0.097   CPU/MuxALUsrcA/control[1]_out[13]_Mux_37_o
+                                                       CPU/alu/Mmux_alu_out6_A110
+    SLICE_X28Y77.A4      net (fanout=1)        0.407   CPU/alu/Mmux_alu_out6_rs_A<0>
+    SLICE_X28Y77.COUT    Topcya                0.471   CPU/alu/Mmux_alu_out6_rs_cy<3>
+                                                       CPU/alu/Mmux_alu_out6_rs_A<0>_rt
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<3>
+    SLICE_X28Y78.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<3>
+    SLICE_X28Y78.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<7>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<7>
+    SLICE_X28Y79.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<7>
+    SLICE_X28Y79.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<11>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<11>
+    SLICE_X28Y80.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<11>
+    SLICE_X28Y80.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<15>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<15>
+    SLICE_X28Y81.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<15>
+    SLICE_X28Y81.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<19>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<19>
+    SLICE_X28Y82.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<19>
+    SLICE_X28Y82.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<23>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<23>
+    SLICE_X28Y83.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<23>
+    SLICE_X28Y83.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<27>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<27>
+    SLICE_X28Y84.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<27>
+    SLICE_X28Y84.DMUX    Tcind                 0.371   CPU/alu/Mmux_alu_out6_split<31>
+                                                       CPU/alu/Mmux_alu_out6_rs_xor<31>
+    SLICE_X30Y85.D2      net (fanout=2)        0.728   CPU/alu/Mmux_alu_out6_split<31>
+    SLICE_X30Y85.CLK     Tas                   0.027   CPU/EXMreg/ALUreg/out<31>
+                                                       CPU/alu/Mmux_alu_out13506
+                                                       CPU/EXMreg/ALUreg/out_31
+    -------------------------------------------------  ---------------------------
+    Total                                      7.969ns (3.083ns logic, 4.886ns route)
+                                                       (38.7% logic, 61.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.013ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU/IDEXreg/Insaddrreg1/out_0 (FF)
+  Destination:          CPU/EXMreg/ALUreg/out_31 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.937ns (Levels of Logic = 18)
+  Clock Path Skew:      -0.015ns (0.107 - 0.122)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: CPU/IDEXreg/Insaddrreg1/out_0 to CPU/EXMreg/ALUreg/out_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y77.CMUX    Tshcko                0.428   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/IDEXreg/Insaddrreg1/out_0
+    SLICE_X33Y77.A1      net (fanout=4)        1.294   CPU/IDEXreg/Insaddrreg1/out<0>
+    SLICE_X33Y77.A       Tilo                  0.097   CPU/IDEXreg/Insaddrreg1/out<2>
+                                                       CPU/forwardunt/Mmux_ALUScrB22
+    SLICE_X32Y77.A6      net (fanout=32)       0.379   CPU/forwardunt/Mmux_ALUScrB21
+    SLICE_X32Y77.A       Tilo                  0.097   CPU/EXMreg/Breg/out<1>
+                                                       CPU/MuxALUsrcB/Mmux_control[1]_out[0]_Mux_63_o11
+    SLICE_X32Y77.B5      net (fanout=2)        0.197   CPU/MuxALUsrcB/control[1]_out[0]_Mux_63_o
+    SLICE_X32Y77.B       Tilo                  0.097   CPU/EXMreg/Breg/out<1>
+                                                       CPU/ALUctr/Mmux_ALUSrc_shamt1_SW9
+    SLICE_X32Y75.B6      net (fanout=2)        0.627   N68
+    SLICE_X32Y75.B       Tilo                  0.097   CPU/alu/Mmux_alu_out13601
+                                                       CPU/Muxshamt/Mmux_out110_1
+    SLICE_X30Y76.A3      net (fanout=1)        0.463   CPU/Muxshamt/Mmux_out110
+    SLICE_X30Y76.COUT    Topcya                0.476   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_lut<0>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+    SLICE_X30Y77.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<3>
+    SLICE_X30Y77.COUT    Tbyp                  0.092   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+    SLICE_X30Y78.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<7>
+    SLICE_X30Y78.COUT    Tbyp                  0.092   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+    SLICE_X30Y79.CIN     net (fanout=1)        0.000   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<11>
+    SLICE_X30Y79.DMUX    Tcind                 0.319   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+                                                       CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+    SLICE_X28Y76.B4      net (fanout=2)        0.547   CPU/alu/Mcompar_alu_b[31]_alu_a[31]_LessThan_11_o_cy<15>
+    SLICE_X28Y76.B       Tilo                  0.097   CPU/MuxALUsrcA/control[1]_out[13]_Mux_37_o
+                                                       CPU/alu/Mmux_alu_out6_A110
+    SLICE_X28Y77.A4      net (fanout=1)        0.407   CPU/alu/Mmux_alu_out6_rs_A<0>
+    SLICE_X28Y77.COUT    Topcya                0.471   CPU/alu/Mmux_alu_out6_rs_cy<3>
+                                                       CPU/alu/Mmux_alu_out6_rs_A<0>_rt
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<3>
+    SLICE_X28Y78.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<3>
+    SLICE_X28Y78.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<7>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<7>
+    SLICE_X28Y79.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<7>
+    SLICE_X28Y79.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<11>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<11>
+    SLICE_X28Y80.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<11>
+    SLICE_X28Y80.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<15>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<15>
+    SLICE_X28Y81.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<15>
+    SLICE_X28Y81.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<19>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<19>
+    SLICE_X28Y82.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<19>
+    SLICE_X28Y82.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<23>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<23>
+    SLICE_X28Y83.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<23>
+    SLICE_X28Y83.COUT    Tbyp                  0.089   CPU/alu/Mmux_alu_out6_rs_cy<27>
+                                                       CPU/alu/Mmux_alu_out6_rs_cy<27>
+    SLICE_X28Y84.CIN     net (fanout=1)        0.000   CPU/alu/Mmux_alu_out6_rs_cy<27>
+    SLICE_X28Y84.DMUX    Tcind                 0.371   CPU/alu/Mmux_alu_out6_split<31>
+                                                       CPU/alu/Mmux_alu_out6_rs_xor<31>
+    SLICE_X30Y85.D2      net (fanout=2)        0.728   CPU/alu/Mmux_alu_out6_split<31>
+    SLICE_X30Y85.CLK     Tas                   0.027   CPU/EXMreg/ALUreg/out<31>
+                                                       CPU/alu/Mmux_alu_out13506
+                                                       CPU/EXMreg/ALUreg/out_31
+    -------------------------------------------------  ---------------------------
+    Total                                      7.937ns (3.295ns logic, 4.642ns route)
+                                                       (41.5% logic, 58.5% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram10/DP.HIGH (SLICE_X30Y73.D2), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.135ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               CPU/EXMreg/ALUreg/out_1 (FF)
+  Destination:          CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram10/DP.HIGH (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.169ns (Levels of Logic = 0)
+  Clock Path Skew:      0.034ns (0.300 - 0.266)
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: CPU/EXMreg/ALUreg/out_1 to CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram10/DP.HIGH
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y74.CQ      Tcko                  0.141   CPU/EXMreg/ALUreg/out<1>
+                                                       CPU/EXMreg/ALUreg/out_1
+    SLICE_X30Y73.D2      net (fanout=131)      0.337   CPU/EXMreg/ALUreg/out<1>
+    SLICE_X30Y73.CLK     Tah         (-Th)     0.309   CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N22
+                                                       CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram10/DP.HIGH
+    -------------------------------------------------  ---------------------------
+    Total                                      0.169ns (-0.168ns logic, 0.337ns route)
+                                                       (-99.4% logic, 199.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram10/DP.LOW (SLICE_X30Y73.D2), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.135ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               CPU/EXMreg/ALUreg/out_1 (FF)
+  Destination:          CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram10/DP.LOW (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.169ns (Levels of Logic = 0)
+  Clock Path Skew:      0.034ns (0.300 - 0.266)
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: CPU/EXMreg/ALUreg/out_1 to CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram10/DP.LOW
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y74.CQ      Tcko                  0.141   CPU/EXMreg/ALUreg/out<1>
+                                                       CPU/EXMreg/ALUreg/out_1
+    SLICE_X30Y73.D2      net (fanout=131)      0.337   CPU/EXMreg/ALUreg/out<1>
+    SLICE_X30Y73.CLK     Tah         (-Th)     0.309   CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N22
+                                                       CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram10/DP.LOW
+    -------------------------------------------------  ---------------------------
+    Total                                      0.169ns (-0.168ns logic, 0.337ns route)
+                                                       (-99.4% logic, 199.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram10/SP.HIGH (SLICE_X30Y73.D2), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.135ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               CPU/EXMreg/ALUreg/out_1 (FF)
+  Destination:          CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram10/SP.HIGH (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.169ns (Levels of Logic = 0)
+  Clock Path Skew:      0.034ns (0.300 - 0.266)
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: CPU/EXMreg/ALUreg/out_1 to CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram10/SP.HIGH
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y74.CQ      Tcko                  0.141   CPU/EXMreg/ALUreg/out<1>
+                                                       CPU/EXMreg/ALUreg/out_1
+    SLICE_X30Y73.D2      net (fanout=131)      0.337   CPU/EXMreg/ALUreg/out<1>
+    SLICE_X30Y73.CLK     Tah         (-Th)     0.309   CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N22
+                                                       CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram10/SP.HIGH
+    -------------------------------------------------  ---------------------------
+    Total                                      0.169ns (-0.168ns logic, 0.337ns route)
+                                                       (-99.4% logic, 199.4% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 7.900ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 1.050ns (Tmpw)
+  Physical resource: CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N56/CLK
+  Logical resource: CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram27/DP.HIGH/CLK
+  Location pin: SLICE_X8Y74.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.900ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 1.050ns (Tmpw)
+  Physical resource: CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N56/CLK
+  Logical resource: CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram27/DP.HIGH/CLK
+  Location pin: SLICE_X8Y74.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.900ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 1.050ns (Tmpw)
+  Physical resource: CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/N56/CLK
+  Logical resource: CPU/_i000010/U0/xst_options.dist_mem_inst/gen_dp_ram.dpram_inst/Mram_ram27/DP.LOW/CLK
+  Location pin: SLICE_X8Y74.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    9.915|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 1553555 paths, 0 nets, and 5720 connections
+
+Design statistics:
+   Minimum period:   9.915ns{1}   (Maximum frequency: 100.857MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Jun 07 00:06:52 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 621 MB
+
+
+

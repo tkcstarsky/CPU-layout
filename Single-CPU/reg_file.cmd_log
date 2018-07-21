@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "C:/Users/tkc/Desktop/register/register/reg_file.xst" -ofn "C:/Users/tkc/Desktop/register/register/reg_file.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc3s500e-vq100-5 reg_file.ngc reg_file.ngd  
+map -intstyle ise -p xc3s500e-vq100-5 -cm area -ir off -pr off -c 100 -o reg_file_map.ncd reg_file.ngd reg_file.pcf 

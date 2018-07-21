@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/MulticycleCPU.xst" -ofn "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/MulticycleCPU.syr" 

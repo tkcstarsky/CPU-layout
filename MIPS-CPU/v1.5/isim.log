@@ -1,0 +1,130 @@
+ISim log file
+Running: C:\Users\tkc\Desktop\Pipeline CPU\PipelineMIPSCPU\test2_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/test2_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+WARNING: File "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/MulticycleCPU.v" Line 31.  For instance uut/Muxshamt/, width 32 of formal port in1 is not equal to width 5 of actual signal shamt.
+WARNING: File "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/MulticycleCPU.v" Line 78.  For instance uut/Datamemory/, width 32 of formal port spo is not equal to width 1 of actual signal spo.
+WARNING: File "C:/Users/tkc/Desktop/Pipeline CPU/PipelineMIPSCPU/MulticycleCPU.v" Line 78.  For instance uut/Datamemory/, width 32 of formal port qdpo is not equal to width 1 of actual signal qdpo.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Finished circuit initialization process.
+WARNING in test2.uut.Datamemory.inst at time               570000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time               790000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+# run 1.00us
+WARNING in test2.uut.Datamemory.inst at time              1010000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              1230000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              1450000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              1670000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              1890000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+# run 1.00us
+WARNING in test2.uut.Datamemory.inst at time              2110000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              2330000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              2550000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              2770000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              2990000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+# run 1.00us
+WARNING in test2.uut.Datamemory.inst at time              3210000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              3430000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              3650000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              3870000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+# run 1.00us
+WARNING in test2.uut.Datamemory.inst at time              4090000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              4330000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              4430000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              4530000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              4630000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              4730000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              4830000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              4930000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+# restart
+# run 1.00us
+Simulator is doing circuit initialization process.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Finished circuit initialization process.
+WARNING in test2.uut.Datamemory.inst at time               570000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time               790000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+# run 1.00us
+WARNING in test2.uut.Datamemory.inst at time              1010000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              1230000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              1450000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              1670000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              1890000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+# run 1.00us
+WARNING in test2.uut.Datamemory.inst at time              2110000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              2330000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              2550000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              2770000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              2990000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+# run 1.00us
+WARNING in test2.uut.Datamemory.inst at time              3210000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              3430000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              3650000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              3870000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+# run 1.00us
+WARNING in test2.uut.Datamemory.inst at time              4090000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              4330000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              4430000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              4530000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              4630000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              4730000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              4830000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
+WARNING in test2.uut.Datamemory.inst at time              4930000 ns: 
+Reading from out-of-range address. Max address in test2.uut.Datamemory.inst is         255
