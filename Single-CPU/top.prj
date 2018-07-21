@@ -1,5 +1,0 @@
-verilog work "reg_file.v"
-verilog work "ipcore_dir/RAM.v"
-verilog work "control.v"
-verilog work "alu.v"
-verilog work "top.v"
