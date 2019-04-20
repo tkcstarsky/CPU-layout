@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/tkc/Desktop/RISCV/USTCPV/project_ise/ustcpv/riscvtest_isim_beh.exe" -prj "C:/Users/tkc/Desktop/RISCV/USTCPV/project_ise/ustcpv/riscvtest_beh.prj" "work.riscvtest" "work.glbl" 

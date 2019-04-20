@@ -1,0 +1,4 @@
+verilog isim_temp "../rtl/ustcpv.v"
+verilog isim_temp "../rtl/top.v"
+verilog isim_temp "../sim/test.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

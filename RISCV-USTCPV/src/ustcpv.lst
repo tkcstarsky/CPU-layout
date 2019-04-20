@@ -1,0 +1,72 @@
+
+darksocv.o:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	ff010113          	addi	sp,sp,-16
+   4:	00112623          	sw	ra,12(sp)
+   8:	00812423          	sw	s0,8(sp)
+   c:	01010413          	addi	s0,sp,16
+  10:	0b0000ef          	jal	ra,c0 <main>
+  14:	0000006f          	j	14 <_start+0x14>
+
+00000018 <putchar>:
+  18:	fd010113          	addi	sp,sp,-48
+  1c:	02812623          	sw	s0,44(sp)
+  20:	03010413          	addi	s0,sp,48
+  24:	00050793          	mv	a5,a0
+  28:	fcf40fa3          	sb	a5,-33(s0)
+  2c:	800007b7          	lui	a5,0x80000
+  30:	fef42623          	sw	a5,-20(s0)
+  34:	00000013          	nop
+  38:	fec42783          	lw	a5,-20(s0)
+  3c:	0007a783          	lw	a5,0(a5) # 80000000 <__global_pointer$+0x7fffe707>
+  40:	fe079ce3          	bnez	a5,38 <putchar+0x20>
+  44:	fdf44703          	lbu	a4,-33(s0)
+  48:	fec42783          	lw	a5,-20(s0)
+  4c:	00e7a023          	sw	a4,0(a5)
+  50:	00000013          	nop
+  54:	02c12403          	lw	s0,44(sp)
+  58:	03010113          	addi	sp,sp,48
+  5c:	00008067          	ret
+
+00000060 <puts>:
+  60:	fe010113          	addi	sp,sp,-32
+  64:	00112e23          	sw	ra,28(sp)
+  68:	00812c23          	sw	s0,24(sp)
+  6c:	02010413          	addi	s0,sp,32
+  70:	fea42623          	sw	a0,-20(s0)
+  74:	01c0006f          	j	90 <puts+0x30>
+  78:	fec42783          	lw	a5,-20(s0)
+  7c:	00178713          	addi	a4,a5,1
+  80:	fee42623          	sw	a4,-20(s0)
+  84:	0007c783          	lbu	a5,0(a5)
+  88:	00078513          	mv	a0,a5
+  8c:	f8dff0ef          	jal	ra,18 <putchar>
+  90:	fec42783          	lw	a5,-20(s0)
+  94:	0007c783          	lbu	a5,0(a5)
+  98:	fe0790e3          	bnez	a5,78 <puts+0x18>
+  9c:	00a00513          	li	a0,10
+  a0:	f79ff0ef          	jal	ra,18 <putchar>
+  a4:	00d00513          	li	a0,13
+  a8:	f71ff0ef          	jal	ra,18 <putchar>
+  ac:	00000013          	nop
+  b0:	01c12083          	lw	ra,28(sp)
+  b4:	01812403          	lw	s0,24(sp)
+  b8:	02010113          	addi	sp,sp,32
+  bc:	00008067          	ret
+
+000000c0 <main>:
+  c0:	ff010113          	addi	sp,sp,-16
+  c4:	00112623          	sw	ra,12(sp)
+  c8:	00812423          	sw	s0,8(sp)
+  cc:	01010413          	addi	s0,sp,16
+  d0:	0ec00513          	li	a0,236
+  d4:	f8dff0ef          	jal	ra,60 <puts>
+  d8:	00000013          	nop
+  dc:	00c12083          	lw	ra,12(sp)
+  e0:	00812403          	lw	s0,8(sp)
+  e4:	01010113          	addi	sp,sp,16
+  e8:	00008067          	ret
